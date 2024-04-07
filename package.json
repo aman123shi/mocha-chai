@@ -1,0 +1,39 @@
+{
+  "name": "mocha-chai",
+  "version": "1.0.0",
+  "description": "a sample code for demonstration about unit tests",
+  "main": "index.js",
+  "author": "Amanuel Shiferaw",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon index.js --exec babel-node -e js",
+    "test": "mocha __tests__ --timeout 30000 --require @babel/register --recursive --exit",
+    "coverage": "nyc yarn test"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "mocha": "^10.4.0",
+    "chai": "^5.1.0",
+    "sinon": "^17.0.1",
+    "nyc": "^15.1.0",
+    "@babel/cli": "^7.12.16",
+    "@babel/core": "^7.12.16",
+    "@babel/node": "^7.12.16",
+    "@babel/plugin-transform-runtime": "^7.12.15",
+    "@babel/preset-env": "^7.12.16",
+    "@babel/register": "^7.12.13",
+    "@babel/runtime": "^7.12.13",
+    "esm": "^3.2.25"
+  },
+  "nyc": {
+    "include": [
+      "src"
+    ],
+    "exclude": [
+      "node_modules"
+    ]
+  }
+}
