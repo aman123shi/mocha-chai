@@ -1,0 +1,8 @@
+{
+  "_": ["__test__/**/*.js"],
+  "require": ["@babel/register"],
+  "recursive": true,
+  "env": {
+    "NODE_ENV": "test"
+  }
+}

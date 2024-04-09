@@ -1,24 +1,24 @@
 {
   "name": "mocha-chai",
-  "version": "1.0.0",
-  "description": "a sample code for demonstration about unit tests",
+  "version": "0.0.1",
+  "description": "Boilerplate for node, express, mongoose REST API",
   "main": "index.js",
-  "author": "Amanuel Shiferaw",
+  "author": "",
   "license": "MIT",
-  "type": "module",
+  "private": true,
   "scripts": {
-    "start": "nodemon index.js --exec babel-node -e js",
-    "test": "mocha __tests__ --timeout 30000 --require @babel/register --recursive --exit",
-    "coverage": "nyc yarn test"
+    "start": "nodemon src/index.js --exec babel-node -e js",
+    "test": "NODE_ENV=test  mocha __tests__ --timeout 30000 --require @babel/register --recursive",
+    "coverage": "nyc yarn test",
+    "lint:fix": "eslint src --fix --ext .js,.jsx,.ts,.tsx ."
+  },
+  "engines": {
+    "node": ">=14"
   },
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.17.1"
   },
   "devDependencies": {
-    "mocha": "^10.4.0",
-    "chai": "^5.1.0",
-    "sinon": "^17.0.1",
-    "nyc": "^15.1.0",
     "@babel/cli": "^7.12.16",
     "@babel/core": "^7.12.16",
     "@babel/node": "^7.12.16",
@@ -26,14 +26,22 @@
     "@babel/preset-env": "^7.12.16",
     "@babel/register": "^7.12.13",
     "@babel/runtime": "^7.12.13",
-    "esm": "^3.2.25"
+    "sinon": "^17.0.1",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "eslint": "^7.10.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-config-prettier": "^6.12.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-watch": "^7.0.0",
+    "mocha": "^8.2.1",
+    "nyc": "^15.1.0",
+    "prettier": "^2.1.2"
   },
   "nyc": {
-    "include": [
-      "src"
-    ],
     "exclude": [
-      "node_modules"
+      "__tests__"
     ]
   }
 }

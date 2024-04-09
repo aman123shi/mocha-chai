@@ -25,3 +25,65 @@ I hope this clarifies the differences between spies, stubs, and mocks in Sinon! 
 
 
 */
+
+// describe("My Test suite", () => {
+//   before(() => {
+//     // Code to run once before all tests in the describe block
+//   });
+
+//   beforeEach(() => {
+//     // Code to run before each test case in the describe block
+//   });
+
+//   afterEach(() => {
+//     // Code to run after each test case in the describe block
+//   });
+
+//   after(() => {
+//     // Code to run once after all tests in the describe block
+//   });
+
+//   it("should do something", () => {
+//     // Test case code
+//   });
+// });
+
+// it("should do something", () => {
+//   const actual = add(5, 2);
+//   const expected = 7;
+
+//   expect(actual).to.be.equal(expected);
+
+//   assert.isTrue(actual);
+
+//   actual.should.equal(expected);
+// });
+
+// // Chai’s different assertion styles
+
+//             class Calculator {
+//             static add(a, b) {
+//             return a + b;
+//             }
+//             }
+
+//             // Create a stub for the  method add and override it to return 10
+//             const addStub = sinon.stub(Calculator, 'add');
+//             addStub.returns(10);
+
+//             // Use the stub
+//             const result = Calculator.add(3, 5);  // Output: 10
+
+//             // Restore the stub
+//             addStub.restore();
+
+//             // Create a mock for the static method
+//             const addMock = sinon.mock(Calculator);
+//             addMock.expects('add').once().withExactArgs(2, 3).returns(5);
+
+//             // Use the mock
+//             const result2 = Calculator.add(2, 3);
+//             console.log(result2); // Output: 5
+
+//             // Verify the mock
+//             addMock.verify();

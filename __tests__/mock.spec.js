@@ -19,7 +19,7 @@ describe("Mocking Dependencies Examples", () => {
     sandbox.restore();
   });
 
-  it("should perform a complex calculation using mocked add method", () => {
+  it("should perform a complex calculation using Stubbed add method", () => {
     // Create a stub for the add method
     const addStub = sandbox.stub(Calculator, "add").returns(10);
 
