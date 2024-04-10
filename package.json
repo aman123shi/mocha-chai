@@ -9,15 +9,13 @@
   "scripts": {
     "start": "nodemon src/index.js --exec babel-node -e js",
     "test": "NODE_ENV=test  mocha __tests__ --timeout 30000 --require @babel/register --recursive",
-    "coverage": "nyc yarn test",
-    "lint:fix": "eslint src --fix --ext .js,.jsx,.ts,.tsx ."
+    "coverage": "nyc yarn test"
   },
-  "engines": {
-    "node": ">=14"
-  },
+
   "dependencies": {
     "express": "^4.17.1"
   },
+
   "devDependencies": {
     "@babel/cli": "^7.12.16",
     "@babel/core": "^7.12.16",
